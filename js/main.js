@@ -117,22 +117,4 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight") showPhoto(current + 1);
 });
 
-// Apparition des blocs au défilement
-const revealTargets = document.querySelectorAll(
-  ".section__head, .service, .offer, .gallery__item, .review, .about__visual, .about__text, .quote__info, .quote__form"
-);
-revealTargets.forEach((el) => el.classList.add("reveal"));
-
-const observer = new IntersectionObserver(
-  (entries) =>
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    }),
-  { threshold: 0.12 }
-);
-revealTargets.forEach((el) => observer.observe(el));
-
 document.getElementById("year").textContent = new Date().getFullYear();

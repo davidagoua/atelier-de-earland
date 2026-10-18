@@ -264,12 +264,8 @@ p { margin: 0 0 1em; }
 .wa-float:hover { transform: scale(1.08); }
 .wa-float svg { width: 32px; height: 32px; }
 
-/* Apparition au défilement */
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s, transform .7s; }
-.reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal { opacity: 1; transform: none; transition: none; }
 }
 
 /* ===== Responsive ===== */
