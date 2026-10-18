@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Ateliers de Earland — Service traiteur à Abidjan</title>
+  <meta name="description" content="Les Ateliers de Earland : service traiteur, bar à cocktails mobile, petits plats livrés et ateliers cuisine à Abidjan et partout en Côte d'Ivoire.">
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- En-tête -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#accueil" class="header__logo">
+        <img src="images/logo.jpg" alt="Logo Les Ateliers de Earland">
+        <span>Les Ateliers <strong>de Earland</strong></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="nav">
+        <a href="#apropos">L'Atelier</a>
+        <a href="#prestations">Prestations</a>
+        <a href="#offres">Offres</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#avis">Avis</a>
+        <a href="#devis" class="btn btn--small">Demander un devis</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Accueil -->
+    <section class="hero" id="accueil">
+      <div class="hero__pattern" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="script">Bienvenue aux</p>
+          <h1>Les Ateliers de Earland</h1>
+          <p class="hero__lead">Service traiteur, bar à cocktails mobile, petits plats livrés et ateliers cuisine. Des saveurs généreuses pour tous vos moments, à Abidjan et partout en Côte d'Ivoire.</p>
+          <div class="hero__actions">
+            <a href="#devis" class="btn">Demander un devis</a>
+            <a href="https://wa.me/2250759471517" class="btn btn--outline" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+          </div>
+          <ul class="hero__badges">
+            <li>Fait maison</li>
+            <li>Menus sur mesure</li>
+            <li>Toute la Côte d'Ivoire</li>
+          </ul>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__plate">
+            <img src="images/logo.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section class="section" id="apropos">
+      <div class="container about">
+        <div class="about__visual">
+          <img src="images/galerie/equipe-bar-mobile.jpg" alt="L'équipe des Ateliers de Earland" loading="lazy">
+          <span class="script">Fait avec amour</span>
+        </div>
+        <div class="about__text">
+          <p class="eyebrow">Notre histoire</p>
+          <h2>Un atelier, une passion : la bonne cuisine partagée</h2>
+          <p>Les Ateliers de Earland, c'est une équipe passionnée qui met sa créativité au service de vos événements. Du cocktail chic au grand repas de famille, nous préparons chaque prestation avec soin, des produits frais et le sens de l'accueil ivoirien.</p>
+          <p>Chez nous, pas de carte figée : chaque menu est composé sur mesure, selon votre événement, vos goûts, votre budget et votre nombre d'invités. Cuisine ivoirienne, africaine ou internationale, nous créons avec vous le repas qui vous ressemble.</p>
+          <div class="about__stats">
+            <div><strong>100%</strong><span>fait maison</span></div>
+            <div><strong>Sur mesure</strong><span>chaque menu est unique</span></div>
+            <div><strong>CI</strong><span>partout en Côte d'Ivoire</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prestations -->
+    <section class="section section--alt" id="prestations">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Ce que nous faisons</p>
+          <h2>Nos prestations</h2>
+          <p>Quatre façons de vous régaler, pour toutes les occasions.</p>
+        </div>
+        <div class="services">
+          <article class="service" id="traiteur">
+            <div class="service__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 8V6m-1 0h2"/></svg>
+            </div>
+            <h3>Service traiteur</h3>
+            <p>Buffets, menus servis à table, cocktails dînatoires : nous composons votre menu sur mesure et prenons en charge la restauration de vos mariages, anniversaires, baptêmes et événements d'entreprise.</p>
+            <ul>
+              <li>Mariages &amp; cérémonies</li>
+              <li>Événements d'entreprise</li>
+              <li>Réceptions privées</li>
+            </ul>
+            <a href="#devis" class="link" data-service="Service traiteur">Demander un devis →</a>
+          </article>
+
+          <article class="service" id="cocktails">
+            <div class="service__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14l-7 8zM12 12v7m-4 1h8M16 4l2-2"/></svg>
+            </div>
+            <h3>Bar à cocktails mobile</h3>
+            <p>Notre bar se déplace chez vous avec ses barmans et ses cocktails maison, avec ou sans alcool : mojitos, cocktails aux fruits frais, créations sur mesure.</p>
+            <ul>
+              <li>Cocktails avec &amp; sans alcool</li>
+              <li>Barmans professionnels</li>
+              <li>Carte personnalisée</li>
+            </ul>
+            <a href="#devis" class="link" data-service="Bar à cocktails mobile">Réserver le bar →</a>
+          </article>
+
+          <article class="service" id="livraison">
+            <div class="service__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7M7 19a2 2 0 1 0 0-.01M17 19a2 2 0 1 0 0-.01"/></svg>
+            </div>
+            <h3>Petits plats livrés</h3>
+            <p>Envie d'un bon repas sans cuisiner ? Commandez nos petits plats faits maison et faites-vous livrer à domicile ou au bureau.</p>
+            <ul>
+              <li>Menus du moment</li>
+              <li>Livraison domicile &amp; bureau</li>
+              <li>Commande par WhatsApp</li>
+            </ul>
+            <a href="https://wa.me/2250759471517?text=Bonjour%2C%20je%20souhaite%20commander%20un%20petit%20plat." class="link" target="_blank" rel="noopener">Commander →</a>
+          </article>
+
+          <article class="service" id="ateliers">
+            <div class="service__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 13a4 4 0 1 1 2-7.5 4 4 0 0 1 8 0A4 4 0 1 1 18 13v6H6zM6 16h12"/></svg>
+            </div>
+            <h3>Ateliers cuisine</h3>
+            <p>Apprenez à cuisiner avec nous ! Des ateliers conviviaux entre amis, en famille ou en team building pour votre entreprise.</p>
+            <ul>
+              <li>Ateliers entre amis</li>
+              <li>Team building</li>
+              <li>Ateliers enfants</li>
+            </ul>
+            <a href="#devis" class="link" data-service="Atelier cuisine">S'inscrire →</a>
+          </article>
+        </div>
+
+        <div class="steps">
+          <h3 class="steps__title">Votre menu sur mesure, en 3 étapes</h3>
+          <ol>
+            <li><strong>Vous nous parlez de votre projet</strong><span>Type d'événement, date, nombre d'invités, budget, envies et régimes alimentaires.</span></li>
+            <li><strong>Nous composons votre menu</strong><span>Une proposition personnalisée et un devis clair, ajustés avec vous jusqu'à ce que tout vous plaise.</span></li>
+            <li><strong>Nous nous occupons de tout</strong><span>Préparation, livraison, service et bar : vous profitez de votre événement l'esprit tranquille.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offres spéciales -->
+    <section class="section offers" id="offres">
+      <div class="container">
+        <div class="section__head section__head--light">
+          <p class="eyebrow">Moments à célébrer</p>
+          <h2>Nos offres spéciales</h2>
+          <p>Des formules pensées pour les grandes occasions de l'année.</p>
+        </div>
+        <div class="offers__grid">
+          <article class="offer">
+            <span class="offer__tag">Février</span>
+            <h3>Déjeuner Saint-Valentin</h3>
+            <p>Un déjeuner en amoureux, préparé et servi avec attention.</p>
+          </article>
+          <article class="offer">
+            <span class="offer__tag">En duo</span>
+            <h3>Pique-nique amoureux</h3>
+            <p>Un panier gourmand et une installation romantique pour un moment à deux.</p>
+          </article>
+          <article class="offer">
+            <span class="offer__tag">Mai &amp; juin</span>
+            <h3>Déjeuner fête des mères &amp; des pères</h3>
+            <p>Gâtez vos parents avec un repas de fête, sans vous soucier de rien.</p>
+          </article>
+        </div>
+        <p class="offers__cta"><a href="#devis" class="btn">Réserver une offre</a></p>
+      </div>
+    </section>
+
+    <!-- Galerie -->
+    <section class="section" id="galerie">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">En images</p>
+          <h2>Nos réalisations</h2>
+          <p>Plats, cocktails et événements : un aperçu de notre savoir-faire.</p>
+        </div>
+        <div class="gallery" id="gallery">
+          <button class="gallery__item gallery__item--tall" type="button">
+            <img src="images/galerie/mojito.jpg" alt="Mojito maison au citron vert et à la menthe" loading="lazy">
+            <span>Mojito maison</span>
+          </button>
+          <button class="gallery__item" type="button">
+            <img src="images/galerie/buffet-salades.jpg" alt="Service d'un buffet de salades fraîches" loading="lazy">
+            <span>Buffet de salades</span>
+          </button>
+          <button class="gallery__item" type="button">
+            <img src="images/galerie/buffet-plats.jpg" alt="Buffet de plats chauds : riz et viandes rôties" loading="lazy">
+            <span>Buffet de plats chauds</span>
+          </button>
+          <button class="gallery__item gallery__item--wide" type="button">
+            <img src="images/galerie/equipe-bar-mobile.jpg" alt="L'équipe des Ateliers de Earland derrière le bar à cocktails mobile" loading="lazy">
+            <span>Notre bar à cocktails mobile</span>
+          </button>
+          <button class="gallery__item gallery__item--tall" type="button">
+            <img src="images/galerie/bar-cocktails-invites.jpg" alt="Invités servis au bar à cocktails lors d'une soirée" loading="lazy">
+            <span>Soirée cocktails</span>
+          </button>
+          <button class="gallery__item" type="button">
+            <img src="images/galerie/assiette-salade.jpg" alt="Assiette de salade servie lors d'un buffet" loading="lazy">
+            <span>Service à l'assiette</span>
+          </button>
+          <button class="gallery__item gallery__item--wide" type="button">
+            <img src="images/galerie/equipe-service.jpg" alt="L'équipe de service en tenue, prête pour un grand événement" loading="lazy">
+            <span>Notre équipe de service</span>
+          </button>
+          <button class="gallery__item" type="button">
+            <img src="images/galerie/bar-cocktails-service.jpg" alt="Cocktail servi à un invité au bar mobile" loading="lazy">
+            <span>Cocktail servi</span>
+          </button>
+        </div>
+        <p class="center">
+          <a href="https://www.instagram.com/les_ateliers_de_earland_/" class="btn btn--outline" target="_blank" rel="noopener">Voir plus sur Instagram</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Avis -->
+    <section class="section section--alt" id="avis">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Ils nous ont fait confiance</p>
+          <h2>Avis clients</h2>
+        </div>
+        <!-- Avis d'exemple : à remplacer par de vrais témoignages clients -->
+        <div class="reviews">
+          <blockquote class="review">
+            <p class="review__stars" aria-label="5 étoiles sur 5">★★★★★</p>
+            <p>« Témoignage client à ajouter ici : retour sur la qualité des plats, le service et l'organisation. »</p>
+            <footer>— Prénom N., Mariage</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p class="review__stars" aria-label="5 étoiles sur 5">★★★★★</p>
+            <p>« Témoignage client à ajouter ici : retour sur le bar à cocktails et l'ambiance de la soirée. »</p>
+            <footer>— Prénom N., Anniversaire</footer>
+          </blockquote>
+          <blockquote class="review">
+            <p class="review__stars" aria-label="5 étoiles sur 5">★★★★★</p>
+            <p>« Témoignage client à ajouter ici : retour sur un événement d'entreprise ou un atelier cuisine. »</p>
+            <footer>— Prénom N., Entreprise</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Devis -->
+    <section class="section" id="devis">
+      <div class="container quote">
+        <div class="quote__info">
+          <p class="eyebrow">Parlons de votre projet</p>
+          <h2>Demander un devis</h2>
+          <p>Remplissez ce formulaire : votre demande nous arrive directement sur WhatsApp et nous vous répondons rapidement avec une proposition sur mesure.</p>
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              <a href="tel:+2250759471517">+225 07 59 47 15 17</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/></svg>
+              <span>Abidjan et partout en Côte d'Ivoire</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>
+              <a href="https://www.instagram.com/les_ateliers_de_earland_/" target="_blank" rel="noopener">@les_ateliers_de_earland_</a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="quote__form" id="quoteForm" novalidate>
+          <div class="field">
+            <label for="nom">Nom complet *</label>
+            <input type="text" id="nom" name="nom" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="tel">Téléphone *</label>
+            <input type="tel" id="tel" name="tel" required autocomplete="tel" placeholder="+225 ...">
+          </div>
+          <div class="field">
+            <label for="service">Prestation *</label>
+            <select id="service" name="service" required>
+              <option value="">Choisir…</option>
+              <option>Service traiteur</option>
+              <option>Bar à cocktails mobile</option>
+              <option>Petits plats livrés</option>
+              <option>Atelier cuisine</option>
+              <option>Offre spéciale (Saint-Valentin, pique-nique, fête des mères/pères)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="evenement">Type d'événement</label>
+            <input type="text" id="evenement" name="evenement" placeholder="Mariage, anniversaire, séminaire…">
+          </div>
+          <div class="field field--half">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+          </div>
+          <div class="field field--half">
+            <label for="invites">Nombre d'invités</label>
+            <input type="number" id="invites" name="invites" min="1" placeholder="Ex. 50">
+          </div>
+          <div class="field">
+            <label for="lieu">Lieu (ville / commune)</label>
+            <input type="text" id="lieu" name="lieu" placeholder="Cocody, Yamoussoukro…">
+          </div>
+          <div class="field">
+            <label for="message">Votre message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Vos envies, votre budget, régimes alimentaires…"></textarea>
+          </div>
+          <p class="form-error" id="formError" role="alert" hidden>Merci de remplir les champs obligatoires (*).</p>
+          <button type="submit" class="btn btn--full">Envoyer ma demande sur WhatsApp</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="images/logo.jpg" alt="Logo Les Ateliers de Earland">
+        <p>Service traiteur, bar à cocktails mobile, petits plats livrés et ateliers cuisine à Abidjan et partout en Côte d'Ivoire.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#apropos">L'Atelier</a></li>
+          <li><a href="#prestations">Prestations</a></li>
+          <li><a href="#offres">Offres spéciales</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#devis">Devis</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+2250759471517">+225 07 59 47 15 17</a></li>
+          <li><a href="https://wa.me/2250759471517" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/les_ateliers_de_earland_/" target="_blank" rel="noopener">Instagram</a></li>
+          <li>Abidjan, Côte d'Ivoire</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> Les Ateliers de Earland. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Visionneuse photo -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" type="button" aria-label="Fermer">×</button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Photo précédente">‹</button>
+    <figure>
+      <img src="" alt="">
+      <figcaption></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Photo suivante">›</button>
+  </div>
+
+  <!-- Bouton WhatsApp flottant -->
+  <a href="https://wa.me/2250759471517" class="wa-float" target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7 0-.3-.1-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5l-.6-.4z"/></svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
