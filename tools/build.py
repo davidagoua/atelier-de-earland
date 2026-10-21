@@ -9,7 +9,7 @@ from PIL import Image
 OUT = sys.argv[1] if len(sys.argv) > 1 else "."
 
 # Adresse du site, sans "/" final. À changer le jour où un nom de domaine est acheté.
-SITE_URL = "https://ccq9a2md4vm6u5vbu8qilqpv.songon.shop"
+SITE_URL = "https://lesateliersdeearland.com"
 SITE_NAME = "Les Ateliers de Earland"
 TODAY = datetime.date.today().isoformat()
 TEL = "+2250759471517"

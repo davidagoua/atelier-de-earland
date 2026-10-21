@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /tools/
 
-Sitemap: https://ccq9a2md4vm6u5vbu8qilqpv.songon.shop/sitemap.xml
+Sitemap: https://lesateliersdeearland.com/sitemap.xml
