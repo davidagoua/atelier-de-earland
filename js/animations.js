@@ -1,4 +1,8 @@
 // Animations GSAP (le site reste entièrement lisible si GSAP ne se charge pas)
+// Dans le HTML :
+//   data-reveal        -> l'élément apparaît au défilement
+//   data-stagger       -> ses enfants apparaissent en cascade
+//   data-reveal-media  -> l'image se dévoile de bas en haut
 if (window.gsap && window.ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -12,100 +16,79 @@ if (window.gsap && window.ScrollTrigger) {
       return () => gsap.set(els, { clearProps: "transition,transform" });
     };
 
-    // Apparition au défilement, en cascade
-    const revealOnScroll = (targets, vars = {}, trigger) => {
-      const els = gsap.utils.toArray(targets);
-      if (!els.length) return;
-      gsap.from(els, {
-        autoAlpha: 0,
-        y: 40,
-        duration: 0.9,
-        ease: "power3.out",
-        stagger: 0.12,
-        onComplete: withoutCssTransition(els),
-        ...vars,
-        scrollTrigger: { trigger: trigger || els[0], start: "top 85%", once: true },
-      });
-    };
+    const onScroll = (trigger) => ({ trigger, start: "top 85%", once: true });
 
     // ===== Accueil =====
-    const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
-    heroTl
-      .from(".hero__pattern", { xPercent: 30, rotate: 20, autoAlpha: 0, duration: 1.4, ease: "power2.out" })
-      .from(".hero__plate", { scale: 0.6, rotate: -25, autoAlpha: 0, duration: 1.2, ease: "back.out(1.6)" }, 0.2)
-      .from(".hero .script", { x: -30, autoAlpha: 0, duration: 0.8 }, 0.4)
-      .from(".hero h1", { y: 50, autoAlpha: 0, duration: 1 }, 0.5)
-      .from(".hero__lead", { y: 30, autoAlpha: 0, duration: 0.8 }, 0.7)
-      .from(".hero__actions .btn", {
-        y: 20, autoAlpha: 0, duration: 0.6, stagger: 0.12,
-        onComplete: withoutCssTransition(".hero__actions .btn"),
-      }, 0.85)
-      .from(".hero__badges li", { y: 15, autoAlpha: 0, duration: 0.5, stagger: 0.08 }, 1);
+    if (document.querySelector(".hero")) {
+      gsap.timeline({ defaults: { ease: "power3.out" } })
+        .from(".hero__bg img", { scale: 1.15, duration: 2.2, ease: "power2.out" })
+        .from(".hero .script", { y: 20, autoAlpha: 0, duration: 0.9 }, 0.3)
+        .from(".hero h1", { y: 50, autoAlpha: 0, duration: 1.1 }, 0.45)
+        .from(".hero__tagline", { y: 30, autoAlpha: 0, duration: 0.9 }, 0.7)
+        .from(".hero__lead", { y: 30, autoAlpha: 0, duration: 0.9 }, 0.85)
+        .from(".hero__actions .btn", {
+          y: 20, autoAlpha: 0, duration: 0.7, stagger: 0.12,
+          onComplete: withoutCssTransition(".hero__actions .btn"),
+        }, 1)
+        .from(".hero__expertises", { scaleX: 0, transformOrigin: "left", duration: 1, ease: "power2.inOut" }, 1.1)
+        .from(".hero__expertises li", { y: 10, autoAlpha: 0, duration: 0.5, stagger: 0.08 }, 1.4);
 
-    // Le plateau flotte doucement
-    gsap.to(".hero__plate", {
-      y: -14, duration: 2.6, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 1.4,
-    });
-
-    // Parallaxe du motif wax
-    gsap.to(".hero__pattern", {
-      yPercent: 12, ease: "none",
-      scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true },
-    });
-
-    // ===== Titres de section =====
-    gsap.utils.toArray(".section__head").forEach((head) =>
-      revealOnScroll(head.children, { stagger: 0.1 }, head)
-    );
-
-    // ===== L'Atelier =====
-    gsap.from(".about__visual", {
-      clipPath: "inset(100% 0 0 0 round 18px)", duration: 1.3, ease: "power4.out",
-      scrollTrigger: { trigger: ".about", start: "top 80%", once: true },
-    });
-    gsap.fromTo(".about__visual img", { scale: 1.25 }, {
-      scale: 1, ease: "none",
-      scrollTrigger: { trigger: ".about", start: "top bottom", end: "bottom top", scrub: true },
-    });
-    revealOnScroll(".about__text > *", { stagger: 0.1 }, ".about__text");
-
-    const percent = document.querySelector(".about__stats strong");
-    if (percent && percent.textContent.trim() === "100%") {
-      const counter = { value: 0 };
-      gsap.to(counter, {
-        value: 100, duration: 1.6, ease: "power2.out",
-        onUpdate: () => (percent.textContent = `${Math.round(counter.value)}%`),
-        scrollTrigger: { trigger: ".about__stats", start: "top 90%", once: true },
+      gsap.to(".hero__bg img", {
+        yPercent: -10, ease: "none",
+        scrollTrigger: { trigger: ".hero", start: "top top", end: "bottom top", scrub: true },
       });
     }
 
-    // ===== Prestations =====
-    revealOnScroll(".service", { y: 60 }, ".services");
-    gsap.from(".service__icon", {
-      scale: 0, rotate: -90, duration: 0.7, ease: "back.out(2)", stagger: 0.12, delay: 0.3,
-      scrollTrigger: { trigger: ".services", start: "top 85%", once: true },
+    // ===== Bandeau des pages intérieures =====
+    if (document.querySelector(".page-hero")) {
+      gsap.timeline({ defaults: { ease: "power3.out" } })
+        .from(".page-hero__bg img", { scale: 1.2, duration: 2, ease: "power2.out" })
+        .from(".page-hero .container > *", { y: 40, autoAlpha: 0, duration: 0.9, stagger: 0.12 }, 0.2);
+    }
+
+    // ===== Apparitions au défilement =====
+    gsap.utils.toArray("[data-reveal]").forEach((el) =>
+      gsap.from(el, {
+        y: 40, autoAlpha: 0, duration: 0.9, ease: "power3.out",
+        onComplete: withoutCssTransition(el),
+        scrollTrigger: onScroll(el),
+      })
+    );
+
+    gsap.utils.toArray("[data-stagger]").forEach((group) =>
+      gsap.from(group.children, {
+        y: 40, autoAlpha: 0, duration: 0.9, ease: "power3.out", stagger: 0.12,
+        onComplete: withoutCssTransition(group.children),
+        scrollTrigger: onScroll(group),
+      })
+    );
+
+    gsap.utils.toArray("[data-reveal-media]").forEach((media) => {
+      gsap.from(media, {
+        clipPath: "inset(100% 0% 0% 0%)", duration: 1.3, ease: "power4.out",
+        scrollTrigger: { trigger: media, start: "top 85%", once: true },
+      });
+      const img = media.querySelector("img");
+      if (img) {
+        gsap.fromTo(img, { scale: 1.2 }, {
+          scale: 1, ease: "none",
+          scrollTrigger: { trigger: media, start: "top bottom", end: "bottom top", scrub: true },
+        });
+      }
     });
-    revealOnScroll(".steps", {}, ".steps");
-    gsap.from(".steps li", {
-      x: -30, autoAlpha: 0, duration: 0.7, ease: "power3.out", stagger: 0.2, delay: 0.2,
-      scrollTrigger: { trigger: ".steps", start: "top 80%", once: true },
-    });
 
-    // ===== Offres =====
-    revealOnScroll(".offer", { y: 50, rotateX: -15, transformPerspective: 800, transformOrigin: "top center" }, ".offers__grid");
-    revealOnScroll(".offers__cta", {}, ".offers__cta");
-
-    // ===== Galerie =====
-    revealOnScroll(".gallery__item", { y: 0, scale: 0.85, duration: 0.8, stagger: 0.08 }, ".gallery");
-
-    // ===== Avis et devis =====
-    revealOnScroll(".review", {}, ".reviews");
-    revealOnScroll(".quote__info > *", { stagger: 0.08 }, ".quote");
-    revealOnScroll(".quote__form", { x: 40, y: 0 }, ".quote");
+    // Projets du portfolio (gérés à part à cause des filtres)
+    const projects = gsap.utils.toArray(".project");
+    if (projects.length) {
+      gsap.from(projects, {
+        y: 50, autoAlpha: 0, duration: 0.9, ease: "power3.out", stagger: 0.1,
+        scrollTrigger: onScroll(".projects"),
+      });
+    }
 
     // ===== Bouton WhatsApp =====
     gsap.from(".wa-float", {
-      scale: 0, duration: 0.6, ease: "back.out(2)", delay: 1.6,
+      scale: 0, duration: 0.6, ease: "back.out(2)", delay: 1.2,
       onComplete: withoutCssTransition(".wa-float"),
     });
   });

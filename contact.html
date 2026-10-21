@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & devis — Les Ateliers de Earland</title>
+  <meta name="description" content="Demandez un devis aux Ateliers de Earland pour votre mariage, événement d'entreprise, dîner privé ou célébration.">
+  <link rel="icon" href="images/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Allura&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="images/logo.jpg" alt="Logo Les Ateliers de Earland">
+        <span>Les Ateliers <strong>de Earland</strong></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="expertises.html">Expertises</a>
+        <a href="realisations.html">Réalisations</a>
+        <a href="journal.html">Journal</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn btn--small header__cta">Parlons de votre projet</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="page-hero__bg" aria-hidden="true"><img src="images/galerie/equipe-service.jpg" alt=""></div>
+      <div class="container">
+        <p class="eyebrow">Contact &amp; devis</p>
+        <h1>Parlons de votre projet</h1>
+        <p>Racontez-nous votre événement : nous revenons vers vous rapidement avec une proposition sur mesure.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container quote">
+        <div class="quote__info" data-stagger>
+          <p class="eyebrow">Demander un devis</p>
+          <h2>Chaque projet commence par une conversation</h2>
+          <p>Mariage, événement d'entreprise, dîner privé ou célébration : plus vous nous en dites, plus notre proposition sera juste.</p>
+          <ul class="contact-list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+2250759471517">+225 07 59 47 15 17</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg><a href="https://wa.me/2250759471517?text=Bonjour%20Les%20Ateliers%20de%20Earland%2C%20je%20souhaite%20%C3%A9changer%20sur%20mon%20projet%20%C3%A9v%C3%A9nementiel." target="_blank" rel="noopener">Échanger sur WhatsApp</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg><a href="https://www.instagram.com/les_ateliers_de_earland_/" target="_blank" rel="noopener">@les_ateliers_de_earland_</a></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11zM12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/></svg><span>Abidjan et partout en Côte d'Ivoire</span></li>
+          </ul>
+          <p class="quote__note">En cliquant sur « Envoyer ma demande », votre message s'ouvre dans WhatsApp, déjà rempli. Il ne vous reste qu'à l'envoyer.</p>
+        </div>
+
+        <form class="quote__form" id="quoteForm" novalidate data-reveal>
+          <div class="field">
+            <label for="nom">Nom &amp; prénom *</label>
+            <input type="text" id="nom" name="nom" required autocomplete="name">
+          </div>
+          <div class="field field--half">
+            <label for="tel">Téléphone / WhatsApp *</label>
+            <input type="tel" id="tel" name="tel" required autocomplete="tel" placeholder="+225 07 00 00 00 00">
+          </div>
+          <div class="field field--half">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="nom@exemple.com">
+          </div>
+          <div class="field">
+            <label for="evenement">Type d'événement *</label>
+            <select id="evenement" name="evenement" required>
+              <option value="">Choisir…</option>
+              <option>Mariage</option>
+              <option>Anniversaire</option>
+              <option>Baptême</option>
+              <option>Dîner privé</option>
+              <option>Événement d'entreprise</option>
+              <option>Lancement</option>
+              <option>Soirée</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="field field--half">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date">
+          </div>
+          <div class="field field--half">
+            <label for="invites">Nombre d'invités</label>
+            <input type="number" id="invites" name="invites" min="1" placeholder="150">
+          </div>
+          <div class="field">
+            <label for="lieu">Lieu</label>
+            <input type="text" id="lieu" name="lieu" placeholder="Cocody, Abidjan">
+          </div>
+          <fieldset class="field">
+            <legend>Services souhaités</legend>
+            <div class="checks">
+              <label class="check"><input type="checkbox" name="services" value="Event planning"> Event planning</label>
+              <label class="check"><input type="checkbox" name="services" value="Wedding planning"> Wedding planning</label>
+              <label class="check"><input type="checkbox" name="services" value="Chef exécutif événementiel"> Chef exécutif événementiel</label>
+              <label class="check"><input type="checkbox" name="services" value="Chef privé"> Chef privé</label>
+              <label class="check"><input type="checkbox" name="services" value="Cocktails & mignardises"> Cocktails &amp; mignardises</label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <label for="message">Description du projet</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre histoire, vos envies, votre thème, votre budget…"></textarea>
+          </div>
+          <p class="form-error" id="formError" role="alert" hidden>Merci de remplir les champs obligatoires (*).</p>
+          <button type="submit" class="btn btn--full">Envoyer ma demande</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="images/logo.jpg" alt="Logo Les Ateliers de Earland">
+        <p class="script">Créer. Recevoir. Célébrer.</p>
+        <p>Structure événementielle portée par Earland : event planning, wedding planning, gastronomie événementielle, chef privé, cocktails et mignardises. Abidjan et partout en Côte d'Ivoire.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="expertises.html">Expertises</a></li>
+          <li><a href="realisations.html">Réalisations</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+2250759471517">+225 07 59 47 15 17</a></li>
+          <li><a href="https://wa.me/2250759471517?text=Bonjour%20Les%20Ateliers%20de%20Earland%2C%20je%20souhaite%20%C3%A9changer%20sur%20mon%20projet%20%C3%A9v%C3%A9nementiel." target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/les_ateliers_de_earland_/" target="_blank" rel="noopener">Instagram</a></li>
+          <li>Abidjan, Côte d'Ivoire</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year"></span> Les Ateliers de Earland. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2250759471517?text=Bonjour%20Les%20Ateliers%20de%20Earland%2C%20je%20souhaite%20%C3%A9changer%20sur%20mon%20projet%20%C3%A9v%C3%A9nementiel." class="wa-float" target="_blank" rel="noopener" aria-label="Échanger sur WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.7c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7 0-.3-.1-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5v-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.4 1.4.6 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5l-.6-.4z"/></svg>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
